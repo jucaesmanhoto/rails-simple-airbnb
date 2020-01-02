@@ -1,0 +1,36 @@
+<%= render 'navbar' %>
+
+<div class="container my-4">
+  <h1 class="py-4">All our flats (<%= @flats.size %>)</h1>
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-4">
+          <div class="card shadow-sm rounded-0 mb-4">
+            <img src="<%= flat.picture_url %>" class="card-img-top" alt="<%= flat.name %>">
+            <div class="card-footer card-body border flex-grow-1 card-height-fix">
+              <h5 class="card-title">
+                <%= flat.name %>
+              </h5>
+              <p class="card-text">
+                <%= flat.description %>
+              </p>
+              <div class="card-icons d-flex">
+                <div>
+                  <i class="fas fa-users"></i>
+                  <%= flat.number_of_guests %>
+                </div>
+                <div>
+                  <strong class="mr-1">€</strong><%= flat.price_per_night %>
+                </div>
+              </div>
+            </div>
+            <div class="card-body py-2 px-4 flex-grow-0">
+              <%= link_to "More info", flat_path(flat), class: 'text-primary mr-1'  %>
+              <%= link_to "Edit", edit_flat_path(flat), class: 'text-warning mr-1'  %>
+              <%= link_to "Remove", flat_path(flat), method: 'delete', class: 'text-danger'  %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

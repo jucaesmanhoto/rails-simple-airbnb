@@ -1,0 +1,59 @@
+<%= render 'navbar' %>
+<div class="banner">
+  <img src="<%= @flat.picture_url %>" alt="<%= @flat.name %>">
+</div>
+<div class="container">
+  <div class="row mt-n4">
+    <div class="col-8">
+
+      <div class="card-group flex-column">
+        <div class="card mt-n4 bg-light shadow-sm">
+          <div class="card-body">
+            <div class="card-title">
+              <h2><%= @flat.name %></h2>
+            </div>
+            <div class="card-text font-weight-lighter">
+              <p><%= @flat.address %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-2 bg-light shadow-sm border">
+          <div class="card-body">
+            <div class="card-title">
+              <h4>A bit more about this flat...</h4>
+            </div>
+            <div class="card-text">
+              <p><%= @flat.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="col-4">
+
+        <div class="card-group flex-column">
+          <div class="card mt-n4 bg-light shadow-sm">
+            <div class="card-body">
+              <div class="card-title">
+                <h6>Book this place!</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-group flex-column">
+          <div class="card mt-2 bg-light shadow-sm">
+            <div class="card-body">
+              <div class="card-title">
+                <h6>Book this place!</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>

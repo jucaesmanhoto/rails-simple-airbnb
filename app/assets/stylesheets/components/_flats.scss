@@ -1,0 +1,27 @@
+body {
+  background-color: white;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-height-fix {
+  height: 200px;
+}
+
+#more-info-link {
+  font-size: 14px;
+}
+
+.card-icons {
+  width: 80px;
+  justify-content: space-between;
+}
